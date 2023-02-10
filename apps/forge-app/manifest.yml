@@ -1,0 +1,22 @@
+modules:
+  jira:globalPage:
+    - key: global-page
+      title: Hello tRPC
+      layout: native
+      resource: global-page
+      resolver:
+        function: resolver
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: global-page
+    path: global-page
+    tunnel:
+      port: 4200
+permissions:
+  content:
+    styles:
+      - 'unsafe-inline'
+app:
+  id: ari:cloud:ecosystem::app/83fc0438-4cb0-4514-addc-15d983881805
